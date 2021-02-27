@@ -1,0 +1,89 @@
+body
+{
+    margin: 0px;
+}
+
+.headers {
+    background-color: #1d3557;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+  }
+
+  .ip-finder:hover {
+    cursor: pointer;
+  }
+
+  .translator :hover {
+    cursor: pointer;
+  }
+
+  .epoch-converter:hover {
+    cursor: pointer;
+  }
+  
+  .outer-flex-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .utility-info {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .ip-utility
+  {
+      font-size: 100px;
+  }
+
+  .epoch-utility
+  {
+      background-color: #1d3557;
+      height: 300px;
+      width: 50%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+  }
+
+  #epoch-timestamp
+  {
+      height: 40px;
+      width: 200px;
+      border-radius: 12px 12px 0px 0px;
+  }
+
+  #epoch-btn
+  {
+      height: 40px;
+      width: 206px;
+      border-style: none;
+      background-color: #457b9d;
+      color: white;
+      font-weight: bolder;
+  }
+
+  #epoch-output
+  {
+    height: 40px;
+    width: 202px;
+    border-radius: 0px 0px 12px 12px;
+    border-style: none;
+  }
+
+  .epoch-to-local
+  {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-style: none;
+  }
