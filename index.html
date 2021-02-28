@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="index.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link href="index.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All in One Utility App</title>
-    <script defer src="index.js"></script>    
-<script>
-</script>
-</head>
-<body>
+    <script defer src="index.js"></script>
+    <script></script>
+  </head>
+  <body>
     <div class="header-section">
-
-      <div class="headers">  
+      <div class="headers">
         <div class="ip-finder">
-            <img src="dropdown.png" height="15px">
-            <span>WHAT'S MY IP</span>
+          <img src="dropdown.png" height="15px" />
+          <span>WHAT'S MY IP</span>
         </div>
 
         <div class="translator">
-            <img src="dropdown.png" height="15px">  
-            <span>ENGLISH TO HINDI</span>
+          <img src="dropdown.png" height="15px" />
+          <span>ENGLISH TO HINDI</span>
         </div>
 
         <div class="epoch-converter">
-            <img src="dropdown.png" height="15px">  
-            <span>EPOCH-CONVERTER</span>
+          <img src="dropdown.png" height="15px" />
+          <span>EPOCH-CONVERTER</span>
         </div>
-    </div>
+      </div>
     </div>
 
     <div class="outer-flex-div">
-        <div class="utility-info"> YOUR IP ADDRESS IS  </div>
-        <div class="ip-utility">
+      <div class="utility-info">YOUR IP ADDRESS IS</div>
+      <div class="ip-utility"></div>
+      <div class="epoch-utility">
+        <div class="unix-timestamp"></div>
+
+        <div class="epoch-to-local">
+          <input
+            placeholder="Enter the Epoch Timestamp"
+            class="epoch-input-and-btn"
+            id="epoch-timestamp"
+            type="number"
+          />
+          <input
+            value="CLICK TO CONVERT TO LOCAL"
+            class="epoch-input-and-btn"
+            id="epoch-btn"
+            type="button"
+          />
+          <textarea readonly id="epoch-output"></textarea>
+          <span id="local-time"></span>
         </div>
-        <div class="epoch-utility">
-            <div class="unix-timestamp">
-                
-            </div>
+      </div>
+    </div>
 
-            <div class="epoch-to-local">
-                <input placeholder="Enter the Epoch Timestamp" class="epoch-input-and-btn" id="epoch-timestamp" type="number">
-                <input value="CLICK TO CONVERT TO LOCAL" class="epoch-input-and-btn" id="epoch-btn" type="button">
-                <textarea readonly id="epoch-output"></textarea>
-                <span id="local-time"></span>
-            </div>
-
-        </div>
-    </div>    
-
-
-    <a href="http://www.facebook.com"><div style="position: absolute; position: fixed; font-size: 20px; font-weight: bolder; bottom: 2%; right: 2%;">
-      MORE APPS
-    </div></a>
-
-</body>
+    <a href="http://www.facebook.com"
+      ><div
+        style="
+          position: absolute;
+          position: fixed;
+          font-size: 20px;
+          font-weight: bolder;
+          bottom: 2%;
+          right: 2%;
+        "
+      >
+        MORE APPS
+      </div></a
+    >
+  </body>
 </html>
