@@ -39,15 +39,24 @@ body {
 
 .ip-utility {
   font-size: 100px;
+  text-shadow: 3px 3px 3px white;
 }
 
-#unix-timest
+.unix-timestamp
+{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 12px;
+  text-shadow:3px 3px 3px white;
+}
 
 .epoch-utility {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  align-items: center;
   display: none;
   margin-top: 40px;
 }
@@ -58,6 +67,8 @@ body {
   border-radius: 12px 12px 0px 0px;
   outline: none;
   text-align: center;
+  font-weight: bolder;
+  font-size: 13px;
 }
 
 #to-local-btn, #to-epoch-btn{
@@ -75,7 +86,7 @@ body {
   border-radius: 0px 0px 12px 12px;
   border-style: none;
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .epoch-to-local, .local-to-epoch {
@@ -84,12 +95,13 @@ body {
   align-items: center;
   justify-content: center;
   border-style: none;
-  border-left: 12px solid transparent;
+  border-right: 30px solid transparent;
 }
 
 .epoch-utility-internal-div
 {
   display: flex;
+  margin-top: 12px;
 }
 
 .local-input-boxes
@@ -104,6 +116,7 @@ body {
   width: 59.5px;
   text-align: center;
   font-weight: bolder;
+  font-size: 13px;
 }
 
 #year-input
@@ -116,8 +129,41 @@ body {
   border-radius: 0px 12px 0px 0px;
 }
 
+.more-apps
+{
+  position: absolute;
+  position: fixed;
+  font-size: 20px;
+  font-weight: bolder;
+  bottom: 2%;
+  right: 2%;
+}
+
 @media only screen and (max-width: 600px) {
   .epoch-utility-internal-div {
     flex-direction: column;
   }
+
+  .epoch-to-local{
+  border-bottom: 30px solid transparent;
+}
+
+  .local-to-epoch{
+  border-bottom: 30px solid transparent;
+}
+
+
+  .headers{
+    font-size: 10px;
+  }
+
+  .ip-utility{
+    font-size:50px;
+  }
+
+  .more-apps
+  {
+    font-size: 12px;
+  }
+
 }

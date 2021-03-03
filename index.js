@@ -82,5 +82,5 @@ fetch("https://api.ipify.org/?format=json")
 //Events
 setInterval(function () {
   unixTimestamp.innerHTML =
-    "CURRENT UNIX TIMESTAMP IS-" + Math.round(Date.now() / 1000);
+    "CURRENT UNIX TIMESTAMP IS-" + Math.round(Date.now() / 1000)+"s";
 }, 1000);
