@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  background-color: #a0c4ff;
 }
 
 .headers {
@@ -40,25 +41,26 @@ body {
   font-size: 100px;
 }
 
+#unix-timest
+
 .epoch-utility {
-  background-color: #1d3557;
-  height: 300px;
-  width: 50%;
-  color: white;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  border-radius: 12px;
+  display: none;
+  margin-top: 40px;
 }
 
 #epoch-timestamp {
   height: 40px;
   width: 400px;
   border-radius: 12px 12px 0px 0px;
+  outline: none;
+  text-align: center;
 }
 
-#epoch-btn {
+#to-local-btn, #to-epoch-btn{
   height: 40px;
   width: 405px;
   border-style: none;
@@ -67,17 +69,55 @@ body {
   font-weight: bolder;
 }
 
-#epoch-output {
+#to-epoch-output, #to-local-output {
   height: 100px;
   width: 400px;
   border-radius: 0px 0px 12px 12px;
   border-style: none;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
-.epoch-to-local {
+.epoch-to-local, .local-to-epoch {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-style: none;
+  border-left: 12px solid transparent;
+}
+
+.epoch-utility-internal-div
+{
+  display: flex;
+}
+
+.local-input-boxes
+{
+  display: flex;
+  justify-content: center;
+}
+
+.local-input
+{
+  height : 40px;
+  width: 59.5px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#year-input
+{
+  border-radius: 12px 0px 0px 0px;
+}
+
+#sec-input
+{
+  border-radius: 0px 12px 0px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .epoch-utility-internal-div {
+    flex-direction: column;
+  }
 }

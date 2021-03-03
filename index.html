@@ -35,21 +35,72 @@
       <div class="epoch-utility">
         <div class="unix-timestamp"></div>
 
-        <div class="epoch-to-local">
-          <input
-            placeholder="Enter the Epoch Timestamp"
-            class="epoch-input-and-btn"
-            id="epoch-timestamp"
-            type="number"
-          />
-          <input
-            value="CLICK TO CONVERT TO LOCAL"
-            class="epoch-input-and-btn"
-            id="epoch-btn"
-            type="button"
-          />
-          <textarea readonly id="epoch-output"></textarea>
-          <span id="local-time"></span>
+        <div class="epoch-utility-internal-div">
+          <div class="epoch-to-local">
+            <input
+              placeholder="Enter the Epoch Timestamp"
+              class="epoch-input-and-btn"
+              id="epoch-timestamp"
+              type="number"
+            />
+            <input
+              value="CLICK TO CONVERT TO LOCAL"
+              class="epoch-input-and-btn"
+              id="to-local-btn"
+              type="button"
+            />
+            <textarea readonly id="to-local-output"></textarea>
+            <span id="local-time"></span>
+          </div>
+
+          <div class="local-to-epoch">
+            <div class="local-input-boxes">
+              <input
+                class="local-input" style="flex: 1;"
+                id="year-input"
+                type="number"
+                placeholder="YYYY"
+              />
+              <input
+                class="local-input"  style="flex: 1;"
+                id="month-input"
+                type="number"
+                placeholder="MM"
+              />
+              <input
+                class="local-input"  style="flex: 1;"
+                id="day-input"
+                type="number"
+                placeholder="DD"
+              />
+              <input
+                class="local-input"  style="flex: 1;"
+                id="hour-input"
+                type="number"
+                placeholder="HH"
+              />
+              <input
+                class="local-input"  style="flex: 1x;"
+                id="min-input"
+                type="number"
+                placeholder="MM"
+              />
+              <input
+                class="local-input"  style="flex: 1;"
+                id="sec-input"
+                type="number"
+                placeholder="SS"
+              />
+            </div>
+            <input
+              value="CLICK TO CONVERT TO EPOCH TIMESTAMP"
+              class="epoch-input-and-btn"
+              id="to-epoch-btn"
+              type="button"
+            />
+            <textarea readonly id="to-epoch-output"></textarea>
+            <span id="local-time"></span>
+          </div>
         </div>
       </div>
     </div>
