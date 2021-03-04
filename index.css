@@ -42,13 +42,12 @@ body {
   text-shadow: 3px 3px 3px white;
 }
 
-.unix-timestamp
-{
+.unix-timestamp {
   text-align: center;
   font-size: 30px;
   font-weight: bolder;
   padding: 12px;
-  text-shadow:3px 3px 3px white;
+  text-shadow: 3px 3px 3px white;
 }
 
 .epoch-utility {
@@ -71,7 +70,8 @@ body {
   font-size: 13px;
 }
 
-#to-local-btn, #to-epoch-btn{
+#to-local-btn,
+#to-epoch-btn {
   height: 40px;
   width: 405px;
   border-style: none;
@@ -80,7 +80,8 @@ body {
   font-weight: bolder;
 }
 
-#to-epoch-output, #to-local-output {
+#to-epoch-output,
+#to-local-output {
   height: 100px;
   width: 400px;
   border-radius: 0px 0px 12px 12px;
@@ -89,7 +90,8 @@ body {
   font-size: 15px;
 }
 
-.epoch-to-local, .local-to-epoch {
+.epoch-to-local,
+.local-to-epoch {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,39 +100,33 @@ body {
   border-right: 30px solid transparent;
 }
 
-.epoch-utility-internal-div
-{
+.epoch-utility-internal-div {
   display: flex;
   margin-top: 12px;
 }
 
-.local-input-boxes
-{
+.local-input-boxes {
   display: flex;
   justify-content: center;
 }
 
-.local-input
-{
-  height : 40px;
+.local-input {
+  height: 40px;
   width: 59.5px;
   text-align: center;
   font-weight: bolder;
   font-size: 13px;
 }
 
-#year-input
-{
+#year-input {
   border-radius: 12px 0px 0px 0px;
 }
 
-#sec-input
-{
+#sec-input {
   border-radius: 0px 12px 0px 0px;
 }
 
-.more-apps
-{
+.more-apps {
   position: absolute;
   position: fixed;
   font-size: 20px;
@@ -144,26 +140,42 @@ body {
     flex-direction: column;
   }
 
-  .epoch-to-local{
-  border-bottom: 30px solid transparent;
-}
+  .epoch-to-local {
+    border-bottom: 30px solid transparent;
+  }
 
-  .local-to-epoch{
-  border-bottom: 30px solid transparent;
-}
+  .local-to-epoch {
+    border-bottom: 30px solid transparent;
+  }
 
-
-  .headers{
+  .headers {
     font-size: 10px;
   }
 
-  .ip-utility{
-    font-size:50px;
+  .ip-utility {
+    font-size: 50px;
   }
 
-  .more-apps
-  {
+  .more-apps {
     font-size: 12px;
   }
 
+  #epoch-timestamp {
+    width: 292px;
+  }
+
+  #to-local-btn,
+  #to-epoch-btn {
+    width: 300px;
+  }
+
+  #to-epoch-output,
+  #to-local-output {
+    width: 296px;
+  }
+
+  .local-input {
+    width: 42px;
+    font-size: 10px;
+  }
 }
