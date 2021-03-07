@@ -1,10 +1,8 @@
 const utilityInfo = document.querySelector(".utility-info");
 
 const ipUtility = document.querySelector(".ip-utility");
-const ipFinder = document.querySelector(".ip-finder");
 
 const epochUtility = document.querySelector(".epoch-utility");
-const epochConverter = document.querySelector(".epoch-converter");
 const unixTimestamp = document.querySelector(".unix-timestamp");
 const epochTimestamp = document.querySelector("#epoch-timestamp");
 const localTime = document.querySelector("#local-time");
@@ -13,26 +11,56 @@ const toEpochBtn = document.querySelector("#to-epoch-btn");
 const toLocalOutput = document.querySelector("#to-local-output");
 const toEpochOutput = document.querySelector("#to-epoch-output");
 
+
+//Languge translator const
+const translatorUtility = document.querySelector(".translator-utility");
+const inputLanguage = document.querySelector("#input-language");
+const outputLanguage = document.querySelector("#output-language");
+const textToConvert = document.querySelector("#language-input-textarea");
+const convertedLanguageText = document.querySelector("#language-output-textarea");
+
+
 //Select a particular utility
-ipFinder.addEventListener("click", () => selectUtility("IP_FINDER"));
-epochConverter.addEventListener("click", () => selectUtility("EPOCH_UTILITY"));
+document.querySelector(".ip-finder").addEventListener("click", () => selectUtility("IP_FINDER"));
+document.querySelector(".translator").addEventListener("click", ()=>selectUtility("LANG_TRANS"));
+document.querySelector(".epoch-converter").addEventListener("click", () => selectUtility("EPOCH_UTILITY"));
 
 //Epoch converter Events
 toLocalBtn.addEventListener("click", () => convertToLocal());
 toEpochBtn.addEventListener("click", () => convertToEpoch());
 
+//Translator Events
+document.querySelector("#language-convert-btn").addEventListener("click",()=>translateLanguage());
+
+translateLanguage = ()=>
+{
+  fetch(`https://api.mymemory.translated.net/get?q=${textToConvert.value}&langpair=${inputLanguage.value}|${outputLanguage.value}`)
+  .then(res => res.json())
+  .then(data=>{
+      const output = data.matches;
+      convertedLanguageText.value = output[0].translation;
+  })
+}
+
 selectUtility = (utility) => {
   switch (utility) {
     case "IP_FINDER":
       utilityInfo.innerHTML = "YOUR IP ADDRESS IS";
-      ipUtility.style.display = "block";
+      ipUtility.style.display = "flex";
       epochUtility.style.display = "none";
+      translatorUtility.style.display ="none";
       break;
     case "EPOCH_UTILITY":
       utilityInfo.innerHTML = "EPOCH UTILITY";
-      epochUtility.style.display = "block";
+      epochUtility.style.display = "flex";
       ipUtility.style.display = "none";
+      translatorUtility.style.display = "none";
       break;
+    case "LANG_TRANS":
+      utilityInfo.innerHTML = "LANGUAGE TRANSLATOR";
+      translatorUtility.style.display = "flex";
+      epochUtility.style.display = "none";
+      ipUtility.style.display = "none";
   }
 };
 
